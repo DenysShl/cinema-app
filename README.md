@@ -63,7 +63,6 @@ below:
    <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
    <property name="connection.url">jdbc:mysql://localhost:3306/ticket_app?serverTimeZone=UTC</property>
    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-
 ```
 4. Run `Maim.class`
 ### _Database structure_
