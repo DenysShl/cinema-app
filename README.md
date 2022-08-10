@@ -52,11 +52,11 @@ if you use PostgreSQL is so there dependency for `pom.xml`
 below:
 
 ````xml
-    <dependency>
-   <groupId>org.postgresql</groupId>
-   <artifactId>postgresql</artifactId>
-   <version>42.3.5</version>
-</dependency>
+   <dependency>
+       <groupId>org.postgresql</groupId>
+       <artifactId>postgresql</artifactId>
+       <version>42.3.5</version>
+   </dependency>
 ````
 3. By default, `hibernare.cfg.xml` is configured for PostgreSQL, but if you want to use MySQL, then you need to change the `hibernate.cfg.xml` file as follows: 
 ```
