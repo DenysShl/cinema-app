@@ -30,39 +30,42 @@ users, tickets and movies. Interaction with the database implemented using `Hibe
 
 ## Technologies that were used to create the service:
 
-- PostgreSQL
+- MySQL or PostgreSQL
 - Hibernate
-- Maven Checkstyle Plugin
+- Maven
 
 ## 🚀️ Installation 🚀️
 
 1. Type git clone, and then paste the URL you copied earlier.
    - `$ git clone https://github.com/DenysShl/cinema-app.git`
-2. `pom.xml`
+2. If your use MySql is there dependency for `pom.xml`  
+below:
+````xml
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.22</version>
+    </dependency>
+````
+
+if you use PostgreSQL is so there dependency for `pom.xml`
+below:
 
 ````xml
     <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-core</artifactId>
-        <version>5.4.21.Final</version>
-    </dependency>
-   <dependency>
-       <groupId>org.hibernate</groupId>
-       <artifactId>hibernate-entitymanager</artifactId>
-       <version>5.4.21.Final</version>
-   </dependency>
-   <dependency>
-       <groupId>org.postgresql</groupId>
-       <artifactId>postgresql</artifactId>
-       <version>42.3.5</version>
-   </dependency>
+   <groupId>org.postgresql</groupId>
+   <artifactId>postgresql</artifactId>
+   <version>42.3.5</version>
+</dependency>
 ````
+3. By default, `hibernare.cfg.xml` is configured for PostgreSQL, but if you want to use MySQL, then you need to change the `hibernate.cfg.xml` file as follows: 
+```
+   <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+   <property name="connection.url">jdbc:mysql://localhost:3306/ticket_app?serverTimeZone=UTC</property>
+   <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+```
+4. Run `Maim.class`
 ### _Database structure_
 
 ![](images/structure_db.png)
-
-### _UML_
-
-![](images/Hibernate_Cinema_Uml.png)
-
-### Hibernate Tutorial  [Hibernate](https://www.tutorialspoint.com/hibernate/)
